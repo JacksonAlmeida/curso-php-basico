@@ -9,17 +9,29 @@
 </head>
 <body>
     <?php
-   /*{  $n = 4.5; o primeiro irá ser alterado para o ultimo(castin);
-        $n = 4;
-    ]*/
     
-    $nome = "jackson";
-    $anos = 23;
-    $n = 13;
-  /*  $nome = (int) "10jackson"; castin irá forca a traformação de string para o tipo inteiro,
-   obs = o numero tem que estar na frente na string */
-    echo "$nome $n";
-    echo "<p>$nome tem $anos anos</p>"
+     //jogando valores na uri como paramentros
+     $n1 = $_GET["a"];
+     $n2 = $_GET["b"];
+
+     echo "<h2>Valores recebidos $n1 e $n2 </h2>";
+
+    $adicao = $n1 + $n2;
+    $subtracao = $n1 - $n2;
+    $divisao = ($n1 + $n2)/2;
+    $resto = $n1 % $n2;
+
+    echo "<h2> Operação matemática </h2>";
+    echo "soma =".$adicao;
+    echo "<br>subtração = $subtracao";
+    echo "<br>divisão = $divisao";
+    echo "<br>resto = $resto";
+    echo "<br>valor absoluto de $n1 = ".abs($n1);
+    echo "<br>potencia de $n1<sup>$n2</sup> = ".pow($n1,$n2);
+    echo "<br>raiz quadrada = ".sqrt($n1);
+    echo "<br>arrendondando o valor = ".round($n1);
+    echo "<br>convertendo para inteiro = ".intval($n2);
+    echo "<br>o valor de $n1 para moeda r$ = ".number_format($n1,2);
     ?>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
